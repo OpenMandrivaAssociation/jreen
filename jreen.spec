@@ -1,6 +1,6 @@
 Summary:	Qt XMPP library
 Name:		jreen
-Version:	1.0.3
+Version:	1.0.5
 Release:	1
 Source0:	jreen-%{version}.tar.bz2
 License:	GPLv2
@@ -63,3 +63,10 @@ Devel files for %name
 
 %install
 %makeinstall_std -C build
+
+
+%changelog
+* Fri Nov 25 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.0.1-1
++ Revision: 733351
+- imported package jreen
+
