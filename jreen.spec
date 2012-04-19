@@ -58,6 +58,7 @@ Devel files for %name
 %setup -q -n libjreen-%{version}
 
 %build
+export PATH=$PATH:/usr/lib/qt4/bin/
 %cmake
 %make
 
