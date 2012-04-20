@@ -12,6 +12,7 @@ BuildRequires:	pkgconfig(QtGui)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libidn)
+BuildRequires:	qt4-devel
 BuildRequires:	cmake >= 2.8.0
 
 %description
