@@ -1,8 +1,8 @@
 Summary:	Qt XMPP library
 Name:		jreen
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
-Source0:	jreen-%{version}.tar.bz2
+Source0:	http://mirror.yandex.ru/gentoo-distfiles/distfiles/jreen-%{version}.tar.gz
 License:	GPLv2
 Group:		System/Libraries
 URL:		https://github.com/euroelessar/jreen
@@ -54,7 +54,7 @@ Devel files for %{name}
 #---------------------------------------------------------------------
 
 %prep
-%setup -q -n libjreen-%{version}
+%setup -q
 
 %build
 export PATH=$PATH:/usr/lib/qt4/bin/
