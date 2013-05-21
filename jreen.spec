@@ -2,18 +2,19 @@ Summary:	Qt XMPP library
 Name:		jreen
 Version:	1.1.1
 Release:	1
-Source0:	http://mirror.yandex.ru/gentoo-distfiles/distfiles/jreen-%{version}.tar.gz
 License:	GPLv2
 Group:		System/Libraries
-URL:		https://github.com/euroelessar/jreen
+Url:		https://github.com/euroelessar/jreen
+Source0:	http://mirror.yandex.ru/gentoo-distfiles/distfiles/jreen-%{version}.tar.gz
+
+BuildRequires:	cmake >= 2.8.0
+BuildRequires:	qt4-devel
 BuildRequires:	pkgconfig(QtNetwork)
 BuildRequires:	pkgconfig(QtCore)
 BuildRequires:	pkgconfig(QtGui)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libidn)
-BuildRequires:	qt4-devel
-BuildRequires:	cmake >= 2.8.0
 
 %description
 Qt XMPP library.
@@ -39,9 +40,8 @@ Qt XMPP library.
 %package -n %{develjreen}
 Summary:	Devel files for %{name}
 Group:		Development/C
-Provides:	%{name}-devel = %{version}-%{release}
-Provides:	lib%{name}-devel = %{version}-%{release}
 Requires:	%{libjreen} = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
 
 %description -n %{develjreen}
 Devel files for %{name}
@@ -63,28 +63,4 @@ export PATH=$PATH:/usr/lib/qt4/bin/
 
 %install
 %makeinstall_std -C build
-
-
-%changelog
-* Fri Apr 20 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.1.0-1
-+ Revision: 792513
-- BR:qt4-devel
-- PATH not in path
-- version update 1.1.0
-
-* Mon Apr 09 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0.5-1
-+ Revision: 789951
-- version update 1.0.5
-
-* Sun Mar 18 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0.3-1
-+ Revision: 785477
-- version update 1.0.3
-
-* Tue Mar 13 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0.2-1
-+ Revision: 784647
-- version update 1.0.2
-
-* Fri Nov 25 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.0.1-1
-+ Revision: 733351
-- imported package jreen
 
