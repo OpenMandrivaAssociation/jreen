@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(QtGui)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libidn)
+BuildRequires:	speex-devel
 
 %description
 Qt XMPP library.
