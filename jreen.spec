@@ -8,7 +8,7 @@ Url:		https://github.com/euroelessar/jreen
 Source0:	http://mirror.yandex.ru/gentoo-distfiles/distfiles/jreen-%{version}.tar.gz
 
 BuildRequires:	cmake >= 2.8.0
-BuildRequires:	qt4-devel
+BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(QtNetwork)
 BuildRequires:	pkgconfig(QtCore)
 BuildRequires:	pkgconfig(QtGui)
