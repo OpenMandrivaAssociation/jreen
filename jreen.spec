@@ -1,7 +1,7 @@
 Summary:	Qt XMPP library
 Name:		jreen
-Version:	1.1.1
-Release:	8
+Version:	1.2.0
+Release:	1
 License:	GPLv2
 Group:		System/Libraries
 Url:		https://github.com/euroelessar/jreen
@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig(QtCore)
 BuildRequires:	pkgconfig(QtGui)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(libgsasl)
 BuildRequires:	pkgconfig(libidn)
 BuildRequires:	speex-devel
 
@@ -22,7 +23,7 @@ Qt XMPP library.
 
 #---------------------------------------------------------------------
 %define jreen_major 1
-%define libjreen %mklibname jreen %{jreen_major}
+%define libjreen %mklibname jreen-qt5 %{jreen_major}
 
 %package -n %{libjreen}
 Summary:	Qt XMPP library
@@ -32,7 +33,7 @@ Group:		System/Libraries
 Qt XMPP library.
 
 %files -n %{libjreen}
-%{_libdir}/libjreen.so.%{jreen_major}*
+%{_libdir}/libjreen-qt5.so.%{jreen_major}*
 
 #--------------------------------------------------------------------
 
@@ -48,9 +49,9 @@ Provides:	%{name}-devel = %{version}-%{release}
 Devel files for %{name}
 
 %files -n %{develjreen}
-%{_includedir}/%{name}/
-%{_libdir}/libjreen.so
-%{_libdir}/pkgconfig/libjreen.pc
+%{_includedir}/%{name}-qt5/
+%{_libdir}/libjreen-qt5.so
+%{_libdir}/pkgconfig/libjreen-qt5.pc
 
 #---------------------------------------------------------------------
 
@@ -58,7 +59,6 @@ Devel files for %{name}
 %setup -q
 
 %build
-export PATH=$PATH:/usr/lib/qt4/bin/
 %cmake
 %make
 
