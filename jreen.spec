@@ -1,7 +1,7 @@
 Summary:	Qt XMPP library
 Name:		jreen
 Version:	1.2.0
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		System/Libraries
 Url:		https://github.com/euroelessar/jreen
@@ -59,7 +59,7 @@ Devel files for %{name}
 %setup -q
 
 %build
-%cmake
+%cmake_qt5
 %make
 
 %install
