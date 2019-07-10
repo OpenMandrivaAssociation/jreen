@@ -1,7 +1,7 @@
 Summary:	Qt XMPP library
 Name:		jreen
-Version:	1.2.1
-Release:	2
+Version:	1.3.0
+Release:	1
 License:	GPLv2
 Group:		System/Libraries
 Url:		https://github.com/euroelessar/jreen
@@ -9,10 +9,10 @@ Source0:	http://mirror.yandex.ru/gentoo-distfiles/distfiles/jreen-%{version}.tar
 
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	qt5-devel
-BuildRequires:	pkgconfig(QtNetwork)
-BuildRequires:	pkgconfig(QtCore)
-BuildRequires:	pkgconfig(QtGui)
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	pkgconfig(Qt5Network)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libgsasl)
 BuildRequires:	pkgconfig(libidn)
